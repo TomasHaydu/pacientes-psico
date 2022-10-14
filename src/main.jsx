@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import EditPatient from './pages/EditPatient'
 import NewPatient from './pages/NewPatient'
 import InfoPatient from './pages/InfoPatient'
+import SessionPayment from './components/SessionPayment'
 
 const router = createBrowserRouter([
   {path:'/',

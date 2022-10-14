@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import SessionPayment from "../components/SessionPayment";
 
 const InfoPatient = () => {
   const [patient, setPatient] = useState({});
@@ -96,7 +97,9 @@ const InfoPatient = () => {
           <span className="font-semibold underline text-xl mr-4">
             Tratamiento Complementario:{""}
           </span>
-          {patient.tratamientoComplementario === "" ? "-" : patient.tratamientoComplementario}
+          {patient.tratamientoComplementario === ""
+            ? "-"
+            : patient.tratamientoComplementario}
         </p>
 
         <p className="text-lg mt-4">
@@ -106,6 +109,12 @@ const InfoPatient = () => {
           </span>
           {patient.observaciones === "" ? "-" : patient.observaciones}
         </p>
+      </div>
+
+      <div>
+        <SessionPayment 
+        patient={patient}
+        />
       </div>
     </div>
   );
